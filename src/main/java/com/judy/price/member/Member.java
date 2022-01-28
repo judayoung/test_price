@@ -6,7 +6,8 @@ import static com.judy.price.member.Grade.*;
 
 public class Member {
 
-    private static int YEAR = Calendar.YEAR;
+    Calendar today=Calendar.getInstance();
+    private int YEAR = today.get(Calendar.YEAR);
 
     private Long card_num;
     private String name;
@@ -59,7 +60,7 @@ public class Member {
     }
     public void setETC(Boolean isETC) {
         this.isETC = isETC;
-        this.grade=calculateGrade(this.isETC, this.birth);
+        this.grade=calculateGrade(isETC, this.birth);
     }
 
     public int getBirth() {
