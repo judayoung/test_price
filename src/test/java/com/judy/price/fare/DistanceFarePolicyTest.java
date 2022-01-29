@@ -14,7 +14,7 @@ class DistanceFarePolicyTest {
     @DisplayName("회원은 등급에 따라 요금이 달라져야 한다.")
     void getFare() {
         Member etc=new Member(1L, "etc", true, 1980);
-        Member oldman=new Member(2L, "oldman", false, 1930);
+        Member oldman=new Member(2L, "oldMan", false, 1930);
         Member adult=new Member(2L, "adult", false, 1980);
         Member youth=new Member(2L, "youth", false, 2007);
         Member child=new Member(2L, "child", false, 2012);
