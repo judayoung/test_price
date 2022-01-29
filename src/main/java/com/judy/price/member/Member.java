@@ -26,12 +26,12 @@ public class Member {
         this.name = name;
         this.isETC = isETC;
         this.birth = birth;
-        this.grade = calculateGrade(isETC, birth);
+        this.grade = calculateGrade();
     }
 
     // 등급 계산기
-    private Grade calculateGrade(Boolean isETC, int birth){
-        Grade grade=null;
+    private Grade calculateGrade(){
+        Grade grade;
 
         if(isETC){
             grade=ETC;
@@ -60,7 +60,7 @@ public class Member {
     }
     public void setETC(Boolean isETC) {
         this.isETC = isETC;
-        this.grade=calculateGrade(isETC, this.birth);
+        this.grade=calculateGrade();
     }
 
     public int getBirth() {
@@ -69,7 +69,7 @@ public class Member {
 
     public void setBirth(int birth) {
         this.birth = birth;
-        this.grade=calculateGrade(this.isETC, this.birth);
+        this.grade=calculateGrade();
     }
 
     public Grade getGrade() {

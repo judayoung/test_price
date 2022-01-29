@@ -1,5 +1,7 @@
 package com.judy.price;
 
+import com.judy.price.fare.DistanceFarePolicy;
+import com.judy.price.fare.FarePolicy;
 import com.judy.price.member.MemberRepository;
 import com.judy.price.member.MemberService;
 import com.judy.price.member.MemberServiceImpl;
@@ -18,6 +20,11 @@ public class AppConfig {
     @Bean
     public MemberService memberService(){
         return new MemberServiceImpl(memberRepository());
+    }
+
+    @Bean
+    public FarePolicy farePolicy(){
+        return new DistanceFarePolicy();
     }
 
 }
